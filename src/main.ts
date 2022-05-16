@@ -4,13 +4,15 @@ const cube = new Cube(["WWWWWWWWW", "OOOOOOOOO", "GGGGGGGGG", "RRRRRRRRR", "BBBB
 
 console.table(cube.tableau);
 
-cube.moveFront();
-cube.moveFront();
-cube.moveLeftPrime();
-cube.moveUp();
-cube.moveUp();
-cube.moveBack();
-cube.moveBack();
+//cube.moveFront();
+//cube.moveFront();
+//cube.moveLeftPrime();
+//cube.moveUp();
+//cube.moveUp();
+//cube.moveBack();
+//cube.moveBack();
+
+cube.move("F2 L' U2 B2");
 
 console.table(cube.tableau);
 

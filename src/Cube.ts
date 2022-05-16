@@ -17,10 +17,10 @@ class Cube {
 
     private elementsToMoveRight(currentCube:string[][])
     {
-        const whiteFace = currentCube[0].filter((element, i)=>i===2 || i===5 || i===8);
-        const greenFace = currentCube[2].filter((element, i)=>i===2 || i===5 || i===8);
-        const blueFace = currentCube[4].filter((element, i)=>i===0 || i===3 || i===6);
-        const yellowFace = currentCube[5].filter((element, i)=>i===2 || i===5 || i===8);
+        const whiteFace = currentCube[0].filter((_element, i)=>i===2 || i===5 || i===8);
+        const greenFace = currentCube[2].filter((_element, i)=>i===2 || i===5 || i===8);
+        const blueFace = currentCube[4].filter((_element, i)=>i===0 || i===3 || i===6);
+        const yellowFace = currentCube[5].filter((_element, i)=>i===2 || i===5 || i===8);
 
         return {
             whiteFace, greenFace, blueFace, yellowFace
@@ -68,10 +68,10 @@ class Cube {
 
     private elementsToMoveLeft(currentCube:string[][])
     {
-        const whiteFace = currentCube[0].filter((element, i)=>i===0 || i===3 || i===6);
-        const greenFace = currentCube[2].filter((element, i)=>i===0 || i===3 || i===6);
-        const blueFace = currentCube[4].filter((element, i)=>i===2 || i===5 || i===8);
-        const yellowFace = currentCube[5].filter((element, i)=>i===0 || i===3 || i===6);
+        const whiteFace = currentCube[0].filter((_element, i)=>i===0 || i===3 || i===6);
+        const greenFace = currentCube[2].filter((_element, i)=>i===0 || i===3 || i===6);
+        const blueFace = currentCube[4].filter((_element, i)=>i===2 || i===5 || i===8);
+        const yellowFace = currentCube[5].filter((_element, i)=>i===0 || i===3 || i===6);
 
         return {
             whiteFace, greenFace, blueFace, yellowFace
@@ -119,10 +119,10 @@ class Cube {
 
     private elementsToMoveFront(currentCube:string[][])
     {
-        const whiteFace = currentCube[0].filter((element, i)=>i===6 || i===7 || i===8);
-        const orangeFace = currentCube[1].filter((element, i)=>i===2 || i===5 || i===8);
-        const redFace = currentCube[3].filter((element, i)=>i===0 || i===3 || i===6);
-        const yellowFace = currentCube[5].filter((element, i)=>i===0 || i===1 || i===2);
+        const whiteFace = currentCube[0].filter((_element, i)=>i===6 || i===7 || i===8);
+        const orangeFace = currentCube[1].filter((_element, i)=>i===2 || i===5 || i===8);
+        const redFace = currentCube[3].filter((_element, i)=>i===0 || i===3 || i===6);
+        const yellowFace = currentCube[5].filter((_element, i)=>i===0 || i===1 || i===2);
 
         return {
             whiteFace, orangeFace, redFace, yellowFace
@@ -169,10 +169,10 @@ class Cube {
 
     private elementsToMoveBack(currentCube:string[][])
     {
-        const whiteFace = currentCube[0].filter((element, i)=>i===0 || i===1 || i===2);
-        const orangeFace = currentCube[1].filter((element, i)=>i===0 || i===3 || i===6);
-        const redFace = currentCube[3].filter((element, i)=>i===2 || i===5 || i===8);
-        const yellowFace = currentCube[5].filter((element, i)=>i===6 || i===7 || i===8);
+        const whiteFace = currentCube[0].filter((_element, i)=>i===0 || i===1 || i===2);
+        const orangeFace = currentCube[1].filter((_element, i)=>i===0 || i===3 || i===6);
+        const redFace = currentCube[3].filter((_element, i)=>i===2 || i===5 || i===8);
+        const yellowFace = currentCube[5].filter((_element, i)=>i===6 || i===7 || i===8);
 
         return {
             whiteFace, orangeFace, redFace, yellowFace
@@ -219,10 +219,10 @@ class Cube {
 
     private elementsToMoveUp(currentCube:string[][])
     {
-        const orangeFace = currentCube[1].filter((element, i)=>i===0 || i===1 || i===2);
-        const greenFace = currentCube[2].filter((element, i)=>i===0 || i===1 || i===2);
-        const redFace = currentCube[3].filter((element, i)=>i===0 || i===1 || i===2);
-        const blueFace = currentCube[4].filter((element, i)=>i===0 || i===1 || i===2);
+        const orangeFace = currentCube[1].filter((_element, i)=>i===0 || i===1 || i===2);
+        const greenFace = currentCube[2].filter((_element, i)=>i===0 || i===1 || i===2);
+        const redFace = currentCube[3].filter((_element, i)=>i===0 || i===1 || i===2);
+        const blueFace = currentCube[4].filter((_element, i)=>i===0 || i===1 || i===2);
 
         return {
             orangeFace, greenFace, redFace, blueFace
@@ -269,10 +269,10 @@ class Cube {
 
     private elementsToMoveDown(currentCube:string[][])
     {
-        const orangeFace = currentCube[1].filter((element, i)=>i===6 || i===7 || i===8);
-        const greenFace = currentCube[2].filter((element, i)=>i===6 || i===7 || i===8);
-        const redFace = currentCube[3].filter((element, i)=>i===6 || i===7 || i===8);
-        const blueFace = currentCube[4].filter((element, i)=>i===6 || i===7 || i===8);
+        const orangeFace = currentCube[1].filter((_element, i)=>i===6 || i===7 || i===8);
+        const greenFace = currentCube[2].filter((_element, i)=>i===6 || i===7 || i===8);
+        const redFace = currentCube[3].filter((_element, i)=>i===6 || i===7 || i===8);
+        const blueFace = currentCube[4].filter((_element, i)=>i===6 || i===7 || i===8);
 
         return {
             orangeFace, greenFace, redFace, blueFace
@@ -316,7 +316,85 @@ class Cube {
 
         this.tableau = currentCube.map(face => face.join(""));
     }
+
+    public move(scramble:string)
+    {
+        const currentScramble = scramble.split(" ");
+
+        for (const element of currentScramble)
+        {
+            switch (element){
+
+                case "R":
+                    this.moveRight();
+                    break;
+                case "R2":
+                    this.moveRight();
+                    this.moveRight();
+                    break;
+                case "R'":
+                    this.moveRightPrime();
+                    break;
+
+                case "L":
+                    this.moveLeft();
+                    break;
+                case "L2":
+                    this.moveLeft();
+                    this.moveLeft();
+                    break;
+                case "L'":
+                    this.moveLeftPrime();
+                    break;
+
+                case "F":
+                    this.moveFront();
+                    break;
+                case "F2":
+                    this.moveFront();
+                    this.moveFront();
+                    break;
+                case "F'":
+                    this.moveFrontPrime();
+                    break;
+                
+                case "B":
+                    this.moveBack();
+                    break;
+                case "B2":
+                    this.moveBack();
+                    this.moveBack();
+                    break;
+                case "B'":
+                    this.moveBackPrime();
+                    break;
+
+                case "U":
+                    this.moveUp();
+                    break;
+                case "U2":
+                    this.moveUp();
+                    this.moveUp();
+                    break;
+                case "U'":
+                    this.moveUpPrime();
+                    break;
+
+                case "D":
+                    this.moveDown();
+                    break;
+                case "D2":
+                    this.moveDown();
+                    this.moveDown();
+                    break;
+                case "D'":
+                    this.moveDownPrime();
+                    break; 
+            }
+        }
+    }
   
+
   }
   
   export default Cube
