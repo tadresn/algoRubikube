@@ -1,5 +1,10 @@
 enum Colors {
-    W=0, Y=1, B=2, G=3, R=4, O=5
-} 
+   White = 0,
+   Orange = 1,
+   Yellow = 5,
+   Blue = 4,
+   Green = 2,
+   Red = 3,
+}
 
-export default Colors
+export default Colors;
