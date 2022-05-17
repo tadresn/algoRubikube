@@ -1,21 +1,23 @@
+import Colors from "./Colors";
+
 class Cube {
-    tableau : string[];
+    tableau : Colors[][];
   
-    constructor(ptab: string[]) {
+    constructor(ptab: Colors[][]) {
       this.tableau = ptab; 
     }
 
-    private rotationFace(face:string[])
+    private rotationFace(face:Colors[])
     {
         return [face[6], face[3], face[0], face[7], face[4], face[1], face[8], face[5], face[2]];
     }
 
-    private rotationFacePrime(face:string[])
+    private rotationFacePrime(face:Colors[])
     {
         return [face[2], face[5], face[8], face[1], face[4], face[7], face[0], face[3], face[6]]
     }
 
-    private elementsToMoveRight(currentCube:string[][])
+    private elementsToMoveRight(currentCube:Colors[][])
     {
         const whiteFace = currentCube[0].filter((_element, i)=>i===2 || i===5 || i===8);
         const greenFace = currentCube[2].filter((_element, i)=>i===2 || i===5 || i===8);
@@ -29,7 +31,7 @@ class Cube {
 
     public moveRight()
     {
-        const currentCube = this.tableau.map(face => face.split(""));
+        const currentCube = [...this.tableau];
 
         const {whiteFace, greenFace, blueFace, yellowFace} = this.elementsToMoveRight(currentCube);
 
@@ -43,7 +45,7 @@ class Cube {
 
         currentCube[3] = this.rotationFace(currentCube[3]);
 
-        this.tableau = currentCube.map(face => face.join(""));
+        this.tableau = currentCube;
     }
 
     public moveRightPrime()
@@ -393,6 +395,8 @@ class Cube {
             }
         }
     }
+
+
   
 
   }

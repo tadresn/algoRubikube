@@ -1,4 +1,7 @@
 import Cube from "./Cube";
+import Colors from "./Colors";
+
+console.log(Colors.G);
 
 const cube = new Cube(["WWWWWWWWW", "OOOOOOOOO", "GGGGGGGGG", "RRRRRRRRR", "BBBBBBBBB", "YYYYYYYYY"]);
 
