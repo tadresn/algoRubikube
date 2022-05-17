@@ -14,15 +14,13 @@ const cube = new Cube([
 
 console.table(cube.tableau);
 
-//cube.moveFront();
-//cube.moveFront();
-//cube.moveLeftPrime();
-//cube.moveUp();
-//cube.moveUp();
-//cube.moveBack();
-//cube.moveBack();
+const a = cube.randomMove();
 
-cube.move("F2 L' U2 B2");
+console.log(a);
+
+cube.move(a);
 
 console.table(cube.tableau);
+
+
 
