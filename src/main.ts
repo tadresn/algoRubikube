@@ -1,4 +1,13 @@
-import Cube from "./Cube";
+import Test from "./Test";
+
+const test = new Test();
+
+console.log(test.testScramble());
+
+
+
+
+/**import Cube from "./Cube";
 import Colors from "./Colors";
 
 const { White, Yellow, Blue, Green, Red, Orange } = Colors;
@@ -18,7 +27,7 @@ for(let i=0; i<100000; i++){
       console.log(false);
    }
    else{console.log(true)}
-}
+}*/
 
 
 //console.table(cube.tableau);

@@ -457,7 +457,7 @@ class Cube {
       }
    }
 
-   public randomMove(){
+  /** public randomMove(){
       let move = "";
       const allMove = ["R", "R'", "R2", "L", "L'", "L2", "F", "F'", "F2", "B", "B'", "B2", "U", "U'", "U2", "D", "D'", "D2"];
       const nb = Math.floor(Math.random()*(Math.floor(30) - Math.ceil(20) + 1) + Math.ceil(20));
@@ -515,8 +515,7 @@ class Cube {
       scramble = reverseScramble.join(' ');
 
       return scramble;
-   }
-
+   }*/
 
 }
 
