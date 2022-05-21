@@ -1,70 +1,82 @@
-class Scramble{
+import { Moves } from "./Moves";
+const { R, Ri, L, Li, F, Fi, B, Bi, U, Ui, D, Di } = Moves;
 
-    scramble : string;
+class Scramble {
+   private _scramble: string;
+   constructor(pScramble?: string) {
+      this._scramble = pScramble ?? this.generateRandomScramble();
+   }
 
-    constructor(pScramble : string){
-        this.scramble = pScramble;
-    }
+   public get scramble(): string {
+      return this._scramble;
+   }
 
-    public randomScramble(){
-        let move = "";
-        const allMove = ["R", "R'", "R2", "L", "L'", "L2", "F", "F'", "F2", "B", "B'", "B2", "U", "U'", "U2", "D", "D'", "D2"];
-        const nb = Math.floor(Math.random()*(Math.floor(30) - Math.ceil(20) + 1) + Math.ceil(20));
-        for(let i=0; i<nb; i++){
-           const a = Math.floor(Math.random()*18);
-           move = move.concat(allMove[a], ' ');
-        }
-        return move;
-     }
+   public set scramble(v: string) {
+      this._scramble = v;
+   }
 
-     public inverseScramble(pScramble: string){
-        const currentScramble = pScramble.split(" ");
-  
-        for (let i=0; i<currentScramble.length; i++){
-           switch(currentScramble[i]){
-              case "R":
-                 currentScramble[i] = "R'";
-                 break;
-              case "R'":
-                 currentScramble[i] = "R";
-                 break;
-              case "L":
-                 currentScramble[i] = "L'";
-                 break;
-              case "L'":
-                 currentScramble[i] = "L";
-                 break;
-              case "F":
-                 currentScramble[i] = "F'";
-                 break;
-              case "F'":
-                 currentScramble[i] = "F";
-                 break;
-              case "B":
-                 currentScramble[i] = "B'";
-                 break;
-              case "B'":
-                 currentScramble[i] = "B";
-                 break;
-              case "U":
-                 currentScramble[i] = "U'";
-                 break;
-              case "U'":
-                 currentScramble[i] = "U";
-                 break;
-              case "D":
-                 currentScramble[i] = "D'";
-                 break;
-              case "D'":
-                 currentScramble[i] = "D";
-                 break;
-           }
-        }
-        const reverseScramble = currentScramble.reverse();
-        pScramble = reverseScramble.join(' ');
-  
-        return pScramble;
-     }
+   public generateRandomScramble() {
+      let move = "";
+      const nb = Math.floor(
+         Math.random() * (Math.floor(30) - Math.ceil(20) + 1) + Math.ceil(20)
+      );
+      for (let i = 0; i < nb; i++) {
+         const movesArray = Object.keys(Moves);
+         const a = Math.floor(Math.random() * movesArray.length);
+         move = move.concat(movesArray[a], " ");
+      }
+      return move;
+   }
+
+   public inverseScramble(pScramble: string) {
+      const currentScramble = pScramble.split(" ");
+
+      for (let i = 0; i < currentScramble.length; i++) {
+         switch (currentScramble[i]) {
+            case R:
+               currentScramble[i] = Ri;
+               break;
+            case Ri:
+               currentScramble[i] = R;
+               break;
+            case L:
+               currentScramble[i] = Li;
+               break;
+            case Li:
+               currentScramble[i] = L;
+               break;
+            case F:
+               currentScramble[i] = Fi;
+               break;
+            case Fi:
+               currentScramble[i] = F;
+               break;
+            case B:
+               currentScramble[i] = F;
+               break;
+            case Bi:
+               currentScramble[i] = B;
+               break;
+            case U:
+               currentScramble[i] = Ui;
+               break;
+            case Ui:
+               currentScramble[i] = U;
+               break;
+            case D:
+               currentScramble[i] = Di;
+               break;
+            case Di:
+               currentScramble[i] = D;
+               break;
+         }
+      }
+      const reverseScramble = currentScramble.reverse();
+      pScramble = reverseScramble.join(" ");
+
+      return pScramble;
+   }
 }
 
-export default Scramble
+export default Scramble;
+
