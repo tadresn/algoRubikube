@@ -377,4 +377,26 @@ export class ThreeByThree extends Cube {
 
       this.cubeArray = currentCube;
    }
+
+   public getScore(currentCube : ThreeByThree) {
+      let correctScore = 0;
+      let maxScore = 54;
+      let solution = new ThreeByThree([
+        Array(9).fill('W'), 
+        Array(9).fill('O'), 
+        Array(9).fill('G'),
+        Array(9).fill('R'), 
+        Array(9).fill('B'),
+        Array(9).fill('Y'),
+      ]);
+    
+      for (let face = 0; face < 6; face++) {
+        for (let piece = 0; piece < 9; piece++) {
+          if (solution.cubeArray[face][piece] === currentCube.cubeArray[face][piece]) {
+            correctScore += 1;
+          }
+        }
+      }
+      return correctScore/maxScore*100;
+    }
 }
