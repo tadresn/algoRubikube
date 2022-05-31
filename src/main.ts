@@ -1,7 +1,10 @@
 import { ThreeByThree } from './ThreeByThree';
 import Test from "./Test";
+import Scramble from './Scramble';
 
 const test = new Test();
+
+const scramble = new Scramble();
 
 //console.log(test.testScramble());
 
@@ -14,6 +17,10 @@ const cube = new ThreeByThree([
     Array(9).fill('Y'),
   ])
 
-cube.move("U");
+const a = scramble.generateRandomScramble()
 
-console.log(cube.getScore(cube));
+console.log(a)
+
+cube.move("R U B L");
+
+console.table(cube);

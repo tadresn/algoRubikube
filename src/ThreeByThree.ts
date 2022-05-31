@@ -398,5 +398,5 @@ export class ThreeByThree extends Cube {
         }
       }
       return correctScore/maxScore*100;
-    }
+   }  
 }
